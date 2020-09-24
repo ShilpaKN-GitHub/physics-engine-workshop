@@ -1,6 +1,7 @@
 const { Engine, World, Bodies, Mouse, MouseConstraint, Constraint } = Matter;
 
 var box1;
+var slingshot;
 var mConstraint;
 
 var bg;
