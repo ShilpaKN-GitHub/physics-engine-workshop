@@ -1,21 +1,24 @@
-
-class Bob{
-  constructor(x, y, r) {
-    const options = {
+class Bob
+{
+  constructor(x, y, radius)
+  {
+    const options =
+    {
       restitution: 0.4
-    };
-    this.body = Matter.Bodies.circle(x, y, r, options);
+    }
+    this.body = Matter.Bodies.circle(x, y, radius, options);
     Matter.World.add(world, this.body);
-    Matter.Body.setMass(this.body.mass *5);
-    this.image=loadImage("images/disc.png");
-    this.r = r;
+    Matter.Body.setMass(this.body.mass * 5);
+
+    this.image = loadImage("images/disc.png");
+    this.radius = radius;
   }
 
-  show() {
+  show()
+  {
     const pos = this.body.position;
     const angle = this.body.angle;
     imageMode(RADIUS);
-    image(this.image, pos.x, pos.y, this.r*2 , this.r*2 );
-   
+    image(this.image, pos.x, pos.y, this.radius * 2, this.radius * 2);
   }
 }
